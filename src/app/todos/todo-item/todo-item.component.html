@@ -1,0 +1,9 @@
+<li>
+  <label>
+    <input type="checkbox"
+           [checked]="todo.done"
+           (change)="toggle(todo.id)" />
+    <span [class.done]="todo.done">{{ todo.title }}</span>
+  </label>
+  <button type="button" (click)="remove(todo.id)">×</button>
+</li>

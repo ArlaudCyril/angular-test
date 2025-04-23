@@ -1,0 +1,20 @@
+<h1>Mes tâches</h1>
+
+<form (submit)="add()" class="new">
+  <input [(ngModel)]="title" name="title"
+         required placeholder="Ajouter une tâche…" />
+  <button>+</button>
+</form>
+
+<ul>
+  @for (todo of todos(); track todo.id) {
+    <app-todo-item
+      [todo]="todo"
+      [toggle]="toggle"
+      [remove]="remove">
+    </app-todo-item>
+  }
+  @empty { <em>Aucune tâche 🎉</em> }
+</ul>
+
+<small>{{ remaining() }} restante(s)</small>

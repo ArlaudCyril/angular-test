@@ -1,0 +1,4 @@
+.new{display:flex;gap:.5rem;margin-bottom:.75rem}
+input{flex:1;padding:.5rem}
+button{padding:.5rem 1rem;cursor:pointer}
+ul{list-style:none;padding:0}
